@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-feb-2019 10:30:04 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="ejemplo03.persistencia.dao.impl.Estaciones" table="estaciones" catalog="estacionesdb" optimistic-lock="version">
+        <id name="codigo" type="int">
+            <column name="CODIGO" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="40" />
+        </property>
+        <property name="zona" type="string">
+            <column name="ZONA" length="50" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="DIRECCION" length="120" />
+        </property>
+        <property name="codProvincia" type="java.lang.Integer">
+            <column name="COD_PROVINCIA" />
+        </property>
+        <property name="nomProvincia" type="string">
+            <column name="NOM_PROVINCIA" length="50" />
+        </property>
+        <property name="codMunicipio" type="java.lang.Integer">
+            <column name="COD_MUNICIPIO" />
+        </property>
+        <property name="descMunicipio" type="string">
+            <column name="DESC_MUNICIPIO" length="50" />
+        </property>
+        <property name="latitud" type="java.lang.Float">
+            <column name="LATITUD" precision="12" scale="0" />
+        </property>
+        <property name="longitud" type="java.lang.Float">
+            <column name="LONGITUD" precision="12" scale="0" />
+        </property>
+        <property name="altitud" type="java.lang.Integer">
+            <column name="ALTITUD" />
+        </property>
+    </class>
+</hibernate-mapping>
